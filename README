@@ -1,0 +1,16 @@
+# sudoku-solver-online
+
+Sudoku solver is a work in progress and an exercise in building a web service with Clojure, Compojure,Hiccup and appengine-magic 
+
+## Usage
+
+See it in action http://sudoku-solver-online.appspot.com
+
+
+## Installation
+
+FIXME: write
+
+## License
+
+Distributed under the Eclipse Public License, the same as Clojure.
