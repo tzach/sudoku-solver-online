@@ -1,7 +1,8 @@
 (ns sudoku_solver_online.core
-  (:require [appengine-magic.core :as ae]
+  (:require
 	    [compojure.response :as response]
-	    [compojure.route :as route])
+	    [compojure.route :as route]
+      [compojure.handler :as handler])
   (:use sudoku_solver_online.sudoku
 	compojure.core
 	[ring.util.response :only [redirect]]
@@ -143,6 +144,7 @@
   (route/not-found (html [:body "page not found" [:p] *main-page*] )))
 
 
-(ae/def-appengine-app sudoku_solver_online_app #'sudoku_solver_online_app_handler)
+(def app
+  (handler/site sudoku_solver_online_app_handler))
 
-;;(ae/start sudoku_solver_online_app)
+
